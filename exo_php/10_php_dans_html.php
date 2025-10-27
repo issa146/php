@@ -6,18 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    
-
+   
     <?php
 
-    $nombre = 50;
-    $str = "salut";
+    $date = date("d/m/Y");
 
-    var_dump($nombre);
-    var_dump($str);
+    echo"
+        <h1>Bienvenue</h1>
+        <h2> sur mon application </h2>
+        <p>Aujourd'hui nous sommes le $date.</p>
+        ";
 
     ?>
-
 
 </body>
 </html>

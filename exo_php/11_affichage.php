@@ -10,14 +10,11 @@
 
     <?php
 
-    $nombre = 50;
-    $str = "salut";
+    $message = "bonjour";
 
-    var_dump($nombre);
-    var_dump($str);
+    echo "<h1>message</h1>";
 
     ?>
-
 
 </body>
 </html>

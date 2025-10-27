@@ -6,18 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    
 
     <?php
-
-    $nombre = 50;
-    $str = "salut";
-
-    var_dump($nombre);
-    var_dump($str);
-
+        echo "<p><b>je</b> <i>m'appel</i><u>issa</u></p>";
     ?>
-
-
+    
 </body>
 </html>

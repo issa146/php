@@ -7,17 +7,14 @@
 </head>
 <body>
     
-
     <?php
 
-    $nombre = 50;
-    $str = "salut";
-
-    var_dump($nombre);
-    var_dump($str);
-
+    // C’est une instruction PHP qui sert à afficher du texte (ou du HTML) sur la page.
+    echo"<div>
+    <h1>Bienvenue</h1>
+     <h2> sur mon application </h2>
+     </div>";
     ?>
-
 
 </body>
 </html>
