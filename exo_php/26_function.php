@@ -64,6 +64,7 @@ function sumArray() {
     foreach ($numbers as $cle) {
         $resulta += $cle;
     }
+    return $resulta;
 }
 
 echo sumArray();
@@ -96,13 +97,103 @@ Exercice : Créez une fonction appelée getFruits() qui ne prend aucun paramètr
 */
 
 function getFruits() {
-    return $fruits = ["pomme","cerise","fraise"];
+    return ["pomme","cerise","fraise"];
 }
 
- echo getFruits();
+ $fruits = getFruits();
+
+ var_dump($fruits);
+?>
+
+<?php
+/*
+7. Fonction avec une chaîne de caractères comme paramètre
+Exercice : Créez une fonction appelée reverseString($str) qui prend une chaîne de caractères $str en paramètre et retourne cette chaîne en ordre inversé.
+*/
+
+function reverseString($str) {
+    $motInverser = "";
+    $longueur = strlen($str);
+
+    for ($i = $longueur - 1; $i >= 0; $i--) {
+        $motInverser .= $str[$i];
+    }
+}
+
+echo reverseString("bonjour");
+?>
+
+
+<?php
+
+/*
+8. Fonction avec paramètres et vérification de type
+Exercice : Créez une fonction appelée divide($a, $b) qui prend deux paramètres $a et $b. La fonction doit vérifier que $b n'est pas égal à 0 avant de diviser $a par $b et retourner le résultat. Si $b est égal à 0, la fonction doit retourner un message d'erreur.
+*/
+
+function divide($a, $b) {
+    if (!is_numeric($a) || !is_numeric($b)) {
+        return "les deux valeurs doivent être des nombres.";
+    }
+
+    if ($b == 0) {
+        return "division par zéro impossible.";
+    }
+
+    return $a / $b;
+}
+
+echo divide(10, 2);
+?>
+
+
+<?php
+/*
+9. Fonction qui utilise une boucle pour générer un résultat
+Exercice : Créez une fonction appelée generateMultiplicationTable($number) qui prend un nombre $number en paramètre et retourne un tableau contenant la table de multiplication de ce nombre de 1 à 10.
+*/
+
+function generateMultiplicationTable($number) {
+    if (!is_numeric($number)) {
+        return "le paramètre doit être un nombre.";
+    }
+
+    $table = []; 
+
+      for ($i = 1; $i <= 10; $i++) {
+        $table[] = ($number * $i);
+    }
+
+    return $table;
+}
+
+$tableau = generateMultiplicationTable(5);
+var_dump($tableau);
+?>
+
+<?php
+/*
+10. Fonction avec une condition complexe
+Exercice : Créez une fonction appelée checkEligibility($age, $hasLicense) qui prend en paramètre un âge $age et un booléen $hasLicense. La fonction doit retourner "Eligible" si l'utilisateur a 18 ans ou plus et possède un permis de conduire, sinon "Not Eligible".
+*/
+
+function checkEligibility($age, $hasLicense) {
+     if (!is_numeric($age) || !is_bool($hasLicense)) {
+        return "les paramètres ne sont pas valides.";
+     }
+
+     if ($age >= 18 && $hasLicense) {
+        return "Eligible";
+    } else {
+        return "Not Eligible";
+    }
+}
+
+echo checkEligibility(20, true);
 
 
 ?>
+
 
 
 
@@ -127,24 +218,9 @@ function getFruits() {
 
 
 
-/*
-7. Fonction avec une chaîne de caractères comme paramètre
-Exercice : Créez une fonction appelée reverseString($str) qui prend une chaîne de caractères $str en paramètre et retourne cette chaîne en ordre inversé.
-*/
-
-/*
-8. Fonction avec paramètres et vérification de type
-Exercice : Créez une fonction appelée divide($a, $b) qui prend deux paramètres $a et $b. La fonction doit vérifier que $b n'est pas égal à 0 avant de diviser $a par $b et retourner le résultat. Si $b est égal à 0, la fonction doit retourner un message d'erreur.
-*/
-
-/*
-9. Fonction qui utilise une boucle pour générer un résultat
-Exercice : Créez une fonction appelée generateMultiplicationTable($number) qui prend un nombre $number en paramètre et retourne un tableau contenant la table de multiplication de ce nombre de 1 à 10.
-*/
 
 
-/*
-10. Fonction avec une condition complexe
-Exercice : Créez une fonction appelée checkEligibility($age, $hasLicense) qui prend en paramètre un âge $age et un booléen $hasLicense. La fonction doit retourner "Eligible" si l'utilisateur a 18 ans ou plus et possède un permis de conduire, sinon "Not Eligible".
 
-*/
+
+
+
