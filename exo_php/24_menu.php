@@ -38,14 +38,14 @@ foreach ($personnes as $personne) {
 
      $total = 0;
 
-    foreach ($menu as $categorie => $items) {
+    foreach ($menu as $cle => $nomPrix) {
 
-        $index = array_rand($items['nom']);
+        $index = array_rand($nomPrix['nom']);
 
-        $nom = $items['nom'][$index];
-         $prix = $items['prix'][$index]; 
+        $nom = $nomPrix['nom'][$index];
+         $prix = $nomPrix['prix'][$index]; 
 
-         echo $categorie . " : " . $nom . " - " . $prix . " €<br>";
+         echo $cle . " : " . $nom . " : " . $prix . " €<br>";
 
          $total += $prix;
         }
@@ -53,58 +53,70 @@ foreach ($personnes as $personne) {
             if ($total > 20) {
             $reduction = $total * 0.10;
             $total -= $reduction;
-            echo "Réduction de 10% appliquée :" . $reduction . " €<br>";
+            echo "Réduction de 10% :" . $reduction . " €<br>";
         }
         echo "Total à payer : " . $total . " €<br>";
     }
 
-
-
-// foreach ($menu as $categorie => $items) {
-//     $indexNom = array_rand($items['nom']);
-//     $indexPrix = array_rand($items['prix']);
-
-//     echo  "Menu pour issa : " ."<br>". $categorie . " : " . $items['nom'][$indexNom] . " - " . $items['prix'][$indexPrix] . " €<br>";
-// }
-
-// foreach ($menu as $categorie => $items) {
-//     $indexNom = array_rand($items['nom']);
-//     $indexPrix = array_rand($items['prix']);
-
-//     echo  "Menu pour hayata : " ."<br>". $categorie . " : " . $items['nom'][$indexNom] . " - " . $items['prix'][$indexPrix] . " €<br>";
-// }
-
-// foreach ($menu as $categorie => $items) {
-//     $indexNom = array_rand($items['nom']);
-//     $indexPrix = array_rand($items['prix']);
-
-//     echo  "Menu pour ryan : " ."<br>". $categorie . " : " . $items['nom'][$indexNom] . " - " . $items['prix'][$indexPrix] . " €<br>";
-// }
-
-
-
-// echo "Menu pour issa : " ."<br>". $menu["entrées"]["nom"][array_rand($menu["entrées"]["nom"])] ." ";
-
-// echo  $menu ['entrées'] ['prix']  [array_rand($menu["entrées"]["prix"])];
-// echo " € ";
-// echo "<br>";
-// -------------------------------------------------------------------------------------------------------------
-// echo $menu["plats"]["nom"][array_rand($menu["plats"]["nom"])]." ";
-// echo $menu ['plats'] ['prix'] [array_rand($menu["plats"]["prix"])];
-// echo " € ";
-// echo "<br>";
-// --------------------------------------------------------------------------------------------------------
-// echo $menu["dessert"]["nom"][array_rand($menu["dessert"]["nom"])]." ";
-// echo $menu ['dessert'] ['prix'] [array_rand($menu["dessert"]["prix"])];
-// echo " € ";
-// echo "<br>";
-
-
-
-
-
-
-
 ?>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+// Tableau du menu complet
+// $menu = [
+//     "entrees" => [
+//         ["nom" => "Salade César", "prix" => 4.55],
+//         ["nom" => "Soupe à l’oignon", "prix" => 3.50],
+//         ["nom" => "Bruschetta", "prix" => 4.90]
+//     ],
+//     "plats" => [
+//         ["nom" => "Lasagnes", "prix" => 12.99],
+//         ["nom" => "Poulet curry", "prix" => 11.0],
+//         ["nom" => "Poisson pané", "prix" => 9.5]
+//     ],
+//     "desserts" => [
+//         ["nom" => "Tiramisu", "prix" => 6.30],
+//         ["nom" => "Crème brûlée", "prix" => 4.5],
+//         ["nom" => "Mousse au chocolat", "prix" => 4.40]
+//     ]
+// ];
+
+// Tableau de personnes
+// $personnes = ["Alice", "Bob", "Charlie"];
+
+// Boucle sur chaque personne pour les afficher
+// foreach ($personnes as $pers) {
+//     echo "<h2>Menu pour $pers</h2>";
+//     $total = 0;
+
+    // Boucle imbriquée pour chaque catégorie
+    // foreach ($menu as $categorie => $plats) {
+    //     $choix = $plats[array_rand($plats)];
+    //     echo "<p>" . ucfirst($categorie) . " : <strong>{$choix['nom']}</strong> - {$choix['prix']} €</p>";
+    //     $total += $choix['prix'];
+    // }
+
+    // Condition pour réduction si le total dépasse 20 euros
+//     if ($total > 20) {
+//         $reduction = round($total * 0.1, 2);
+//         $total -= $reduction;
+//         echo "<p>💸 Réduction appliquée : -{$reduction} €</p>";
+//     }
+
+//     echo "<p>💳 Total à payer : <strong>$total €</strong></p>";
+//     echo "<hr>";
+// }
+// ?>
