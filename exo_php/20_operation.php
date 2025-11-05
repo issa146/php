@@ -70,11 +70,11 @@
     echo "$km miles"
 
 
-    $score = 50;
-    $score += 10;
-    $score -= 5;
+    // $score = 50;
+    // $score += 10;
+    // $score -= 5;
 
-    echo $score;
+    // echo $score;
 
 
     
