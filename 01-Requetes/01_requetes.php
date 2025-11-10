@@ -51,7 +51,7 @@
     <code>
         <body>
             <!-- Notez l'ajout des paramètres dans l'URL de l'action -->
-            <form action="" method="post">
+            <form action="?keyName=flamant&motif=augmentation" method="post">
             <label for="nom">Nom:</label>
             <input type="text" id="nom" name="nom" >
         
@@ -84,8 +84,23 @@
 
             // Affichage des datas
 
-            echo "Nom (via POST):" . $nom . "<br>";      
-            echo "prénom (via POST):" . $prenom . "<br>";      
+            echo "Nom (via POST):" . htmlspecialchars(string: $nom) . "<br>";      
+            echo "prénom (via POST):" . htmlspecialchars($prenom) . "<br>"; 
+            /* htmlspecialchars() permet d'éviter les éventuelles attaques XSS, c'est à dire qu'on empêche un utilisateur malveillant d'injecter du code interprétable sur le site
+            exemple si on fait une condition 
+            $nom = $isset($_GET["prenom]) ? echo "je rajoutedu code malveillant pour récupérer des infos : echo "je laisse avec la fonction les instruction ne seront pas interpretées mais écrites telles qu'on le voit ;)
+            
+            A utiliser quand on affiche les donnéezs et pas quand on les envoit !
+
+            2-DATAS GET METHOD
+            */
+            
+            $keyName = isset($_GET["keyName"]) && !empty($_GET["keyName"]) ? $_GET["keyName"] : "Acaun keyName";
+
+            $augmen = isset($_GET["motif"]) && !empty($_GET["motif"]) ? $_GET["motif"] : "Acaun motif";
+
+            echo "Nom (via GET): la personne malveillante du doux nom de" . htmlspecialchars($keyName) . "<br>";
+            echo "motif (via GET): demande une" . htmlspecialchars($augmen) . "<br>";
             
             ?>
     </code>
