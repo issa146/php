@@ -7,16 +7,29 @@
 </head>
 <body>
     <?php
+if(isset($_GET["article"]) && isset($_GET["color"]) && isset($_GET["price"]) && !empty($_GET["article"] && !empty($_GET["color"]) && !empty($_GET["price"]))) {
+    $article = htmlspecialchars($_GET["article"]);
+    $color   = htmlspecialchars($_GET["color"]);
+    $price   = htmlspecialchars($_GET["price"]);
 
-    if(isset($_GET["ordi"]) && isset($_GET["color"]) && isset($_GET["price"]) && !empty($_GET["ordi"] && !empty($_GET["color"]) && !empty($_GET["price"]))) {
+    echo "<h2>Description de l'article</h2>";
+    echo "<p>Nom : $article</p>";
+    echo "<p>Couleur : $color</p>";
+    echo "<p>Prix : $price €</p>";
+} else {
+    echo "<p style='color:red;'> Paramètres manquants dans l'URL.</p>";
+}
+    
+ 
+
+
+
+
         
-    }
 
     ?>
 </body>
 </html>
-
-
 
 
 

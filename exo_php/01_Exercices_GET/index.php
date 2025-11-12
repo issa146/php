@@ -12,11 +12,11 @@
     <h1>Nos produits</h1>
 
     <!-- Ici différents liens de produits -->
-     <a href="traitement.php?ordi=hp&color=gris&price=700">pc : hp</a>
+     <a href="traitement.php?article=hp&color=gris&price=700">pc : hp</a>
      <br>
-     <a href="traitement.php?ordi=mack&color=noire&price=1000">pc : mack</a>
+     <a href="traitement.php?article=mack&color=noire&price=1000">pc : mack</a>
      <br>
-     <a href="traitement.php?ordi=hp&color=blanc&price=800"> pc : hp2</a>
+     <a href="traitement.php?article=hp&color=blanc&price=800"> pc : hp2</a>
      
 
 
