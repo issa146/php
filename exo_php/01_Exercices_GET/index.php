@@ -17,6 +17,15 @@
      <a href="traitement.php?ordi=mack&color=noire&price=1000">pc : mack</a>
      <br>
      <a href="traitement.php?ordi=hp&color=blanc&price=800"> pc : hp2</a>
+
+
+
+     
+    <!-- <a href="traitement.php?article=jean&couleur=bleu&prix=30">Jean bleu</a>
+    <br>
+    <a href="traitement.php?article=robe&couleur=rouge&prix=40">Robe rouge</a>
+    <br>
+    <a href="traitement.php?article=pull&couleur=blanc&prix=10">Pull blanc</a> -->
      
 
 
