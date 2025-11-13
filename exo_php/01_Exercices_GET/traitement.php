@@ -7,7 +7,25 @@
 </head>
 <body>
     <?php
+if(isset($_GET["article"]) && isset($_GET["color"]) && isset($_GET["price"]) && !empty($_GET["article"] && !empty($_GET["color"]) && !empty($_GET["price"]))) {
+    $article = htmlspecialchars($_GET["article"]);
+    $color   = htmlspecialchars($_GET["color"]);
+    $price   = htmlspecialchars($_GET["price"]);
 
+    echo "<h2>Description de l'article</h2>";
+    echo "<p>Nom : $article</p>";
+    echo "<p>Couleur : $color</p>";
+    echo "<p>Prix : $price €</p>";
+} else {
+    echo "<p style='color:red;'> Paramètres manquants dans l'URL.</p>";
+}
+    
+ 
+
+
+
+
+<<<<<<< HEAD
     /** Exercice 4 : Affichage d'un message personnalisé
  * 
  *  Objectif : Afficher un message personnalisé en fonction de la couleur passée dans l'URL
@@ -28,14 +46,13 @@ var_dump($_GET);
         } else {
             echo "<p>la couleur est blanc</p>";
         }
+=======
+>>>>>>> 7db5abc754a67e67510b316ef131bf7bff305a94
         
-    }
 
     ?>
 </body>
 </html>
-
-
 
 
 
