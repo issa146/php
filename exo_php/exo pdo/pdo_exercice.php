@@ -54,7 +54,7 @@ try {
  *  1 . Utiliser la méthode exec() pour insérer un nouvel dirigeant dans la table dirigeants. Afficher le nombre de lignes affectées par l'insertion et l'id du dirigeant inséré
  */
 
-$aficher = $pdo->exec( "INSERT INTO dirigeants (prenom, nom, poste,email,salaire,date_embauche) VALUES ('issa', 'issaadi', 'patron', 'issaissaadi@gmail.com', 10000, '2025-07-15')");
+$aficher = $pdo->exec( "INSERT INTO dirigeants (prenom, nom, poste,email,salaire,date_embauche) VALUES ('issa', 'issaadi', 'patron', 'issaissaadi@gmail.com', 100000, '2025-07-15')");
 
 echo "Nombre de lignes affectées par le INSERT : $aficher <br>";
 echo 'Dernier id généré par la BDD : ' . $pdo->lastInsertId();
